@@ -56,8 +56,9 @@ if uploaded_file:
 
 st.header("CSV File Upload History")
 df = get_file_metadata()
-columns_to_display = ["original_name", "status", "created_on", "count"]
-df = df[columns_to_display].reset_index(drop=True)
-st.dataframe(df)
+if not df.empty:
+    columns_to_display = ["original_name", "status", "created_on", "count"]
+    df = df[columns_to_display].reset_index(drop=True)
+    st.dataframe(df)
 
 
