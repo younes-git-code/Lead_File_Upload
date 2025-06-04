@@ -3,13 +3,12 @@ from google.cloud import datastore
 import logging
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "spartan-vine-456818-e9-c9000351f0f2.json"
+#os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "spartan-vine-456818-e9-c9000351f0f2.json"
+#bucket_name = "lead_csv_file"
+#datastore_name = 'lead-files'
 
-bucket_name = "lead_csv_file"
-datastore_name = 'lead-files'
-
-#BUCKET_NAME = os.getenv("BUCKET_NAME")
-#DATASTORE_NAME = os.getenv("DATASTORE_NAME")
+BUCKET_NAME = os.getenv("BUCKET_NAME")
+DATASTORE_NAME = os.getenv("DATASTORE_NAME")
 
 storage_client = storage.Client()
 datastore_client = datastore.Client(database=datastore_name)
