@@ -37,7 +37,7 @@ if uploaded_file:
             progress.progress(70, text="Storing file metadata...")
             file_id = store_file_metadata(
                 original_name=uploaded_file.name,
-                cloud_path=uploaded_file.name,
+                cloud_path=file_path.name,
                 count=df.shape[0]
             )
             logging.info(f"File metadata stored with ID: {file_id}")
