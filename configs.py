@@ -7,8 +7,8 @@ import os
 #bucket_name = "lead_csv_file"
 #datastore_name = 'lead-files'
 
-BUCKET_NAME = os.getenv("BUCKET_NAME")
-DATASTORE_NAME = os.getenv("DATASTORE_NAME")
+bucket_name = os.getenv("BUCKET_NAME")
+datastore_name = os.getenv("DATASTORE_NAME")
 
 storage_client = storage.Client()
 datastore_client = datastore.Client(database=datastore_name)
